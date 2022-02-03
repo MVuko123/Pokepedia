@@ -1,4 +1,4 @@
-$(doucment).ready(function () {
+$(document).ready(function () {
     let mybutton = document.getElementById("btn-back-to-top");
 
     window.onscroll = function () {

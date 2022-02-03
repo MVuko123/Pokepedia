@@ -32,6 +32,13 @@ include './snippets/provjeraTima.php';
     <main>
         <div class="container-fluid my-5">
             <div class="row">
+                <!-- <button
+                    type="button"
+                    class="btn btn-outline-dark btn-floating"
+                    id="btn-back-to-top"
+                    >
+                    <img src="./assets/slike/to_top.png" alt="" style="max-width: 32px" />
+                 </button> -->
                 <div class="col-md-3 my-3 my-md-0">
                     <h3 class="yt_kanal">Službeni Pokémon YouTube Kanal</h3>
                     <div class="elfsight-app-9ad27e5f-f310-4f24-94ba-3008b75664d0"></div>
