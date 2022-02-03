@@ -59,7 +59,7 @@ if (session_status() === PHP_SESSION_NONE) {
               "Tetris", "Pokémon", "Dokey Kong Land", "Kirby's Dream Land", "Ms.
               Pac-Man", "Super Mario", "Yoshi" i mnoge druge.
             </p>
-            <img class="col-md-8" src="../assets/slike/gameBoy.jpg" alt="Game Boy" />
+            <img class="col-md-8" src="./assets/slike/gameBoy.jpg" alt="Game Boy" />
           </div>
           <div class="col-md-4 text-white" id="testni_div">
             <h1>Igrice</h1>

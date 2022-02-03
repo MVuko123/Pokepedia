@@ -52,7 +52,7 @@
               prethodnikom je prodano preko 118.69 milijuna kopija diljem
               svijeta.
             </p>
-            <img class="col-md-6" src="../assets/slike/gameBoyColor.jpg" alt="Game Boy Color" />
+            <img class="col-md-6" src="./assets/slike/gameBoyColor.jpg" alt="Game Boy Color" />
           </div>
           <div class="col-md-4 text-white" id="testni_div">
             <h1>Igrice</h1>

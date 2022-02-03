@@ -381,7 +381,8 @@ span.type.Fairy:after {
 span.type.Fairy.sm:after {
 	content: 'Fai';
 }
-/* ! TYPES */
+
+/* ! TYPES
 
 .social-list {
     display: inline-flex;
@@ -474,4 +475,4 @@ span.type.Fairy.sm:after {
   
   .social-list a:hover {
     color: white;
-  }
+  } */
