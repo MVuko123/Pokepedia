@@ -1,0 +1,477 @@
+#pokemonCard {
+    border: 1px solid black;
+    box-shadow: 3px 3px 8px black;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#modalName { cursor: pointer; }
+
+#modalName:hover { animation: pop 1s ease-in-out; }
+
+@keyframes pop{ 50%  { transform: scale(1.25); } }
+
+
+/* ! TYPES */
+span.type {
+	border: 2px solid #000;
+	border-radius: 20px;
+	padding: 4px 16px;
+	color: #fff;
+
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+span.type.sm {
+	border-radius: 0px;
+	padding: 0px 5px;
+	margin: 0px;
+}
+/*https://bulbapedia.bulbagarden.net/wiki/Category:Type_color_templates*/
+span.type.normal {
+	background-color: #A8A878;
+	border-color: #6D6D4E;
+}
+span.type.normal:after {
+	content: 'Normal';
+}
+span.type.normal.sm:after {
+	content: 'Nor';
+}
+span.type.fire {
+	background-color: #F08030;
+	border-color: #9C531F;
+}
+span.type.fire:after {
+	content: 'Fire';
+}
+span.type.fire.sm:after {
+	content: 'Fir';
+}
+span.type.water {
+	background-color: #6890F0;
+	border-color: #445E9C;
+}
+span.type.water:after {
+	content: 'Water';
+}
+span.type.water.sm:after {
+	content: 'Wat';
+}
+span.type.electric {
+	background-color: #F8D030;
+	border-color: #A1871F;
+}
+span.type.electric:after {
+	content: 'Electric';
+}
+span.type.electric.sm:after {
+	content: 'Ele';
+}
+span.type.grass {
+	background-color: #78C850;
+	border-color: #4E8234;
+}
+span.type.grass:after {
+	content: 'Grass';
+}
+span.type.grass.sm:after {
+	content: 'Gra';
+}
+span.type.ice {
+	background-color: #98D8D8;
+	border-color: #638D8D;
+}
+span.type.ice:after {
+	content: 'Ice';
+}
+span.type.fighting {
+	background-color: #C03028;
+	border-color: #7D1F1A;
+}
+span.type.fighting:after {
+	content: 'Fighting';
+}
+span.type.fighting.sm:after {
+	content: 'Fig';
+}
+span.type.poison {
+	background-color: #A040A0;
+	border-color: #682A68;
+}
+span.type.poison:after {
+	content: 'Poison';
+}
+span.type.poison.sm:after {
+	content: 'Poi';
+}
+span.type.ground {
+	background-color: #E0C068;
+	border-color: #927D44;
+}
+span.type.ground:after {
+	content: 'Ground';
+}
+span.type.ground.sm:after {
+	content: 'Gro';
+}
+span.type.flying {
+	background-color: #A890F0;
+	border-color: #6D5E9C;
+}
+span.type.flying:after {
+	content: 'Flying';
+}
+span.type.flying.sm:after {
+	content: 'Fly';
+}
+span.type.psychic {
+	background-color: #F85888;
+	border-color: #A13959;
+}
+span.type.psychic:after {
+	content: 'Psychic';
+}
+span.type.psychic.sm:after {
+	content: 'Psy';
+}
+span.type.bug {
+	background-color: #A8B820;
+	border-color: #6D7815;
+}
+span.type.bug:after {
+	content: 'Bug';
+}
+span.type.rock {
+	background-color: #B8A038;
+	border-color: #786824;
+}
+span.type.rock:after {
+	content: 'Rock';
+}
+span.type.rock.sm:after {
+	content: 'Roc';
+}
+span.type.ghost {
+	background-color: #705898;
+	border-color: #493963;
+}
+span.type.ghost:after {
+	content: 'Ghost';
+}
+span.type.ghost.sm:after {
+	content: 'Gho';
+}
+span.type.dragon {
+	background-color: #7038F8;
+	border-color: #4924A1;
+}
+span.type.dragon:after {
+	content: 'Dragon';
+}
+span.type.dragon.sm:after {
+	content: 'Dra';
+}
+span.type.dark {
+	background-color: #705848;
+	border-color: #49392F;
+}
+span.type.dark:after {
+	content: 'Dark';
+}
+span.type.dark.sm:after {
+	content: 'Dar';
+}
+span.type.steel {
+	background-color: #B8B8D0;
+	border-color: #787887;
+}
+span.type.steel:after {
+	content: 'Steel';
+}
+span.type.steel.sm:after {
+	content: 'Ste';
+}
+span.type.fairy {
+	background-color: #EE99AC;
+	border-color: #9B6470;
+}
+span.type.fairy:after {
+	content: 'Fairy';
+}
+span.type.fairy.sm:after {
+	content: 'Fai';
+}
+/* ! TYPES */
+
+span.type.Normal {
+	background-color: #A8A878;
+	border-color: #6D6D4E;
+}
+span.type.Normal:after {
+	content: 'Normal';
+}
+span.type.Normal.sm:after {
+	content: 'Nor';
+}
+span.type.Fire {
+	background-color: #F08030;
+	border-color: #9C531F;
+}
+span.type.Fire:after {
+	content: 'Fire';
+}
+span.type.Fire.sm:after {
+	content: 'Fir';
+}
+span.type.Water {
+	background-color: #6890F0;
+	border-color: #445E9C;
+}
+span.type.Water:after {
+	content: 'Water';
+}
+span.type.Water.sm:after {
+	content: 'Wat';
+}
+span.type.Electric {
+	background-color: #F8D030;
+	border-color: #A1871F;
+}
+span.type.Electric:after {
+	content: 'Electric';
+}
+span.type.Electric.sm:after {
+	content: 'Ele';
+}
+span.type.Grass {
+	background-color: #78C850;
+	border-color: #4E8234;
+}
+span.type.Grass:after {
+	content: 'Grass';
+}
+span.type.Grass.sm:after {
+	content: 'Gra';
+}
+span.type.Ice {
+	background-color: #98D8D8;
+	border-color: #638D8D;
+}
+span.type.Ice:after {
+	content: 'Ice';
+}
+span.type.Fighting {
+	background-color: #C03028;
+	border-color: #7D1F1A;
+}
+span.type.Fighting:after {
+	content: 'Fighting';
+}
+span.type.Fighting.sm:after {
+	content: 'Fig';
+}
+span.type.Poison {
+	background-color: #A040A0;
+	border-color: #682A68;
+}
+span.type.Poison:after {
+	content: 'Poison';
+}
+span.type.Poison.sm:after {
+	content: 'Poi';
+}
+span.type.Ground {
+	background-color: #E0C068;
+	border-color: #927D44;
+}
+span.type.Ground:after {
+	content: 'Ground';
+}
+span.type.Ground.sm:after {
+	content: 'Gro';
+}
+span.type.Flying {
+	background-color: #A890F0;
+	border-color: #6D5E9C;
+}
+span.type.Flying:after {
+	content: 'Flying';
+}
+span.type.Flying.sm:after {
+	content: 'Fly';
+}
+span.type.Psychic {
+	background-color: #F85888;
+	border-color: #A13959;
+}
+span.type.Psychic:after {
+	content: 'Psychic';
+}
+span.type.Psychic.sm:after {
+	content: 'Psy';
+}
+span.type.Bug {
+	background-color: #A8B820;
+	border-color: #6D7815;
+}
+span.type.Bug:after {
+	content: 'Bug';
+}
+span.type.Rock {
+	background-color: #B8A038;
+	border-color: #786824;
+}
+span.type.Rock:after {
+	content: 'Rock';
+}
+span.type.Rock.sm:after {
+	content: 'Roc';
+}
+span.type.Ghost {
+	background-color: #705898;
+	border-color: #493963;
+}
+span.type.Ghost:after {
+	content: 'Ghost';
+}
+span.type.Ghost.sm:after {
+	content: 'Gho';
+}
+span.type.Dragon {
+	background-color: #7038F8;
+	border-color: #4924A1;
+}
+span.type.Dragon:after {
+	content: 'Dragon';
+}
+span.type.Dragon.sm:after {
+	content: 'Dra';
+}
+span.type.Dark {
+	background-color: #705848;
+	border-color: #49392F;
+}
+span.type.Dark:after {
+	content: 'Dark';
+}
+span.type.Dark.sm:after {
+	content: 'Dar';
+}
+span.type.Steel {
+	background-color: #B8B8D0;
+	border-color: #787887;
+}
+span.type.Steel:after {
+	content: 'Steel';
+}
+span.type.Steel.sm:after {
+	content: 'Ste';
+}
+span.type.Fairy {
+	background-color: #EE99AC;
+	border-color: #9B6470;
+}
+span.type.Fairy:after {
+	content: 'Fairy';
+}
+span.type.Fairy.sm:after {
+	content: 'Fai';
+}
+/* ! TYPES */
+
+.social-list {
+    display: inline-flex;
+  }
+  
+  .social-list li {
+    list-style: none;
+    margin-right: 10px;
+  }
+  
+  .maincard {
+    position: relative;
+    width: 120px;
+    height: 80px;
+  }
+  
+  .thecard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+  }
+  
+  .thecard:hover {
+    transform: rotateY(180deg);
+  }
+  
+  .thefront {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hidden;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #eee;
+    box-shadow: 5px 6px 6px 2pxr lightgray;
+    padding: 4px;
+  }
+  
+  .theback {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: hidden;
+    color: #fff;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+    border: 1px solid #eee;
+    box-shadow: 5px 6px 6px 2px lightgray;
+    padding: 4px;
+  }
+  
+  .social-text small {
+    font-size: 20px;
+  }
+  
+  @media (max-width: 700px) {
+    .social-list {
+      display: block;
+    }
+  }
+  
+  .facebook {
+    background: #3b5998;
+  }
+  
+  .instagram {
+    background: #3f729b;
+  }
+  
+  .youtube {
+    background: #ff0000;
+  }
+  
+  .pinterest {
+    background: #cb2027;
+  }
+  
+  .twitter {
+    background: #add8e6;
+  }
+  
+  .social-list a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .social-list a:hover {
+    color: white;
+  }

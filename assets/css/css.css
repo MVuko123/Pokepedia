@@ -1,0 +1,276 @@
+#pocetna-body {
+  background-image: url("../slike/bg_main.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 20px;
+  margin: 0;
+}
+
+#dashboard-body {
+  background-image: url("../slike/bg_dashboard.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 20px;
+}
+
+.active {
+  background-color: #36454f;
+}
+
+#admin_prijava {
+  background-color: #4a646c;
+}
+
+#admin_prijava,
+.active {
+  border-radius: 0px;
+  border-bottom: 1px solid #fff;
+}
+
+
+.yt_kanal {
+  color: white;
+  text-align: center;
+}
+
+#testni_div {
+  font-family: "Times New Roman", Times, serif;
+  text-align: justify;
+  padding: 0 3%;
+}
+
+#testni_div h1:hover {
+  color: red;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  border: none;
+}
+
+.eapps-twitter-feed-title {
+  color: white;
+}
+
+.social-list {
+  display: inline-flex;
+}
+
+.social-list li {
+  list-style: none;
+  margin-right: 10px;
+}
+
+.maincard {
+  position: relative;
+  width: 120px;
+  height: 80px;
+}
+
+.thecard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+}
+
+.thecard:hover {
+  transform: rotateY(180deg);
+}
+
+.thefront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: hidden;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #eee;
+  box-shadow: 5px 6px 6px 2pxr lightgray;
+  padding: 4px;
+}
+
+.theback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: hidden;
+  color: #fff;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+  border: 1px solid #eee;
+  box-shadow: 5px 6px 6px 2px lightgray;
+  padding: 4px;
+}
+
+.social-text small {
+  font-size: 20px;
+}
+
+@media (max-width: 700px) {
+  .social-list {
+    display: block;
+  }
+}
+
+.facebook {
+  background: #3b5998;
+}
+
+.instagram {
+  background: #3f729b;
+}
+
+.youtube {
+  background: #ff0000;
+}
+
+.pinterest {
+  background: #cb2027;
+}
+
+.twitter {
+  background: #add8e6;
+}
+
+.blog {
+    background: #FFA500;
+}
+
+.social-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-list a:hover {
+  color: white;
+}
+
+#login {
+  background-image: url("../slike/bg_login.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+#registracija {
+  background-image: url("../slike/registration.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+#gameBoy {
+  background-image: url("../slike/gameBoy_bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../slike/gameBoy_bg.jpg");
+}
+
+#gameBoyColor {
+  background-image: url("../slike/gameBoyColor_bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 20px;
+  background-image: linear-gradient(rgba(2, 2, 2, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../slike/gameBoyColor_bg.jpg");
+}
+
+#gameBoyAdvanced {
+  background-image: url("../slike/gameBoyAdvanced_bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../slike/gameBoyAdvanced_bg.jpg");
+}
+
+#nintendoDS1 {
+  background-image: url("../slike/nintednoDS_bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../slike/nintednoDS_bg.jpg");
+}
+
+#nintendoDS2 {
+  background-image: url("../slike/nintednoDS1_bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../slike/nintednoDS1_bg.jpg");
+}
+
+#nintendo3DS1 {
+  background-image: url("../slike/nintedno3DS_bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../slike/nintedno3DS_bg.jpg");
+}
+
+#nintendo3DS2 {
+  background-image: url("../slike/nintedno3DS1_bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../slike/nintedno3DS1_bg.jpg");
+}
+
+#nintendoSwitch {
+  background-image: url("../slike/nintednoSwitch_bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../slike/nintednoSwitch_bg.jpg");
+}
+
+.cardKorisnik {
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 1.5rem;
+    color: black;
+}
+
+#adminH2 {
+    color: rgb(255, 0, 0);
+}
+
+#ownerH2 {
+    color: darkgreen;
+}
