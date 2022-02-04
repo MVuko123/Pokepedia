@@ -107,9 +107,9 @@ $korisnikQuery = mysqli_query($conn, $korisnikSql) or die(mysqli_error($error));
                                 <div class=" col-md-6">
                                     <?php if ($_SESSION['role'] == 'owner') {
                                         if ($korisnikRow['uloga'] != 'admin') { ?>
-                                            <a href="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&param=true" class="btn btn-success btn-sm w-100">Postavi admina</a>
+                                            <a href="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=true" class="btn btn-success btn-sm w-100">Postavi admina</a>
                                         <?php } else { ?>
-                                            <a href="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&param=false" class="btn btn-warning btn-sm w-100">Ukloni admina</a>
+                                            <a href="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=false" class="btn btn-warning btn-sm w-100">Ukloni admina</a>
                                     <?php }
                                     } ?>
                                 </div>

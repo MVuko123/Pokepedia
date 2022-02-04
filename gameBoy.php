@@ -3,7 +3,7 @@
 include_once './snippets/konekcija.php';
 
 if (session_status() === PHP_SESSION_NONE) {
-    session_start();
+  session_start();
 }
 
 ?>

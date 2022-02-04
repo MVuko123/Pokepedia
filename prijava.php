@@ -6,6 +6,7 @@ $msg = 'Unesite Vaše podatke.';
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+
 $_SESSION['email'] = "";
 
 if (isset($_POST['login']) && !empty($_POST['email']) && !empty($_POST['lozinka'])) {

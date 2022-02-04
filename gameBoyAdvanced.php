@@ -1,3 +1,15 @@
+
+<?php
+
+include_once './snippets/konekcija.php';
+
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
