@@ -102,16 +102,66 @@ $korisnikQuery = mysqli_query($conn, $korisnikSql) or die(mysqli_error($error));
                                     } else {
                                         echo '<div class="col-md-12">';
                                     } ?>
-                                    <a href="./snippets/obrisiKorisnika.php?id=<?php echo $korisnikRow['id']; ?>" class="btn btn-danger btn-sm w-100 <?php if ($_SESSION['id'] == $korisnikRow['id'] || ($korisnikRow['uloga'] == 'admin' && $_SESSION['role'] != 'owner')) echo 'd-none'; ?>">Obriši korisnika</a>
+                                    <button id="obrisiKorisnika-<?php echo $korisnikRow['id']; ?>" class="btn btn-danger btn-sm w-100 <?php if ($_SESSION['id'] == $korisnikRow['id'] || ($korisnikRow['uloga'] == 'admin' && $_SESSION['role'] != 'owner')) echo 'd-none'; ?>">Obriši korisnika</button>
+                                    <script>
+                                    $("#obrisiKorisnika-<?php echo $korisnikRow['id']; ?>").click(function() {
+                                        var url ="./snippets/obrisiKorisnika.php?id=<?php echo $korisnikRow['id']; ?>";
+                                        $.ajax({
+                                            url: url,
+                                            type: "GET",
+                                            data: {},
+                                            cache: false,
+                                            dataType: "html",
+                                            success: function() {
+                                               console.log("Obrisano");
+                                            }
+                                        });
+                                    })
+                                    </script>
                                 </div>
                                 <div class=" col-md-6">
                                     <?php if ($_SESSION['role'] == 'owner') {
                                         if ($korisnikRow['uloga'] != 'admin') { ?>
-                                            <a href="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=true" class="btn btn-success btn-sm w-100">Postavi admina</a>
+                                            <button id="postaviAdmina"class="btn btn-success btn-sm w-100">Postavi admina</button>
+                                        <script>
+                                            $("#postaviAdmina").click(function(){
+                                                var url ="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=true";
+                                                $.ajax({
+                                                url: url,
+                                                type: "GET",
+                                                data: {},
+                                                cache: false,
+                                                dataType: "html",
+                                                success: function() {
+                                                console.log("Postavljen");
+                                                }
+                                             });
+                                            })
+                                         </script>
+                                           
                                         <?php } else { ?>
-                                            <a href="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=false" class="btn btn-warning btn-sm w-100">Ukloni admina</a>
+                                            <button id="ukloniAdmina" class="btn btn-warning btn-sm w-100">Ukloni admina</button>
+
+                                            <script>
+                                            $("#ukloniAdmina").click(function(){
+                                                var url ="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=false";
+                                                $.ajax({
+                                                url: url,
+                                                type: "GET",
+                                                data: {},
+                                                cache: false,
+                                                dataType: "html",
+                                                success: function() {
+                                                console.log("Maknuto");
+                                                }
+                                            });
+                                            })
+                                           
                                     <?php }
                                     } ?>
+                                    
+                                    
+                                    </script>  
                                 </div>
                         </div>
                     <?php } ?>

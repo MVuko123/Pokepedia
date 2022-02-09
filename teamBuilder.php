@@ -175,6 +175,7 @@ $query = mysqli_query($conn, $sql) or die(mysqli_error($error));
                                         });
                                     });
                                 </script>
+
                                 <?php
                                 if (isInTeam($row['id'], $pokemoniutimu)) { ?>
                                     <form action="./snippets/ukloni.php?id=<?php echo $row['id']; ?>" method="POST">
@@ -185,6 +186,7 @@ $query = mysqli_query($conn, $sql) or die(mysqli_error($error));
                                         <button class="btn btn-dark" <?php if ($timpun) echo 'disabled'; ?> type="submit">Dodaj</button>
                                     </form>
                                 <?php } ?>
+
                             </div>
                             <div class="modal fade" id="pokemonModal-<?php echo $row['id']; ?>" tabindex="-1" aria-labelledby="pokemonModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">

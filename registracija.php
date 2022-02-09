@@ -86,9 +86,9 @@ if (isset($_POST['reg_user'])) {
     <main>
 
         <div class="container-fluid mx-auto my-5">
-            <button type="button" class="btn btn-outline-dark btn-floating" id="btn-back-to-top">
+            <!-- <button type="button" class="btn btn-outline-dark btn-floating" id="btn-back-to-top">
                 <img src="assets/slike/to_top.png" alt="" style="max-width: 32px" />
-            </button>
+            </button> -->
 
             <form action="" method="post">
                 <div class="container-fluid py-5 h-100">

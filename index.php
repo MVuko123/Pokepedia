@@ -34,7 +34,8 @@ include './snippets/provjeraTima.php';
         <div class="container-fluid my-5">
             <div class="row">
                 <div class="col-md-3 my-3 my-md-0">
-                    <h3 class="yt_kanal">Službeni Pokémon YouTube Kanal</h3>
+                    <h3 class="yt_kanal">Službeni Pokémon YouTube Kanal</h3>                   
+                    <!-- <div class="elfsight-app-af929599-4eac-4b4d-a2d2-7a64851b5877"></div> -->
                     <div class="elfsight-app-9ad27e5f-f310-4f24-94ba-3008b75664d0"></div>
                 </div>
                 <div class="col-md-6 text-white" id="testni_div">
@@ -76,12 +77,12 @@ include './snippets/provjeraTima.php';
                     <h3 class="text-white text-center">
                         Službeni Pokémon Twitter Račun
                     </h3>
-                    <a class="twitter-timeline" data-height="76.5vh" data-theme="dark" href="https://twitter.com/Pokemon?ref_src=twsrc%5Etfw">Tweets by Pokemon</a>
+                    <a class="twitter-timeline" data-height="75vh" data-theme="dark" href="https://twitter.com/Pokemon?ref_src=twsrc%5Etfw">Tweets by Pokemon</a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
         </div>
-        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+        <script src="https://apps.elfsight.com/p/platform.js" defer></script><
     </main>
     <footer class="bg-dark text-center text-white text-lg-start mx-0px">
         <?php include './snippets/footer.html'; ?>

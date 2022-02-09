@@ -86,7 +86,7 @@ if (!empty($_POST["remember"])) {
                                             <a class="text-white-50" href="#!">Zaboravili ste lozinku?</a>
                                         </p>
                                         <div class="form-check d-flex justify-content-center mb-4">
-                                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" name="remeber" />
+                                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" name="remember" />
                                             <label class="form-check-label" for="form2Example3">
                                                 Zapamti me.
                                             </label>
