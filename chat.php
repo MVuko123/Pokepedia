@@ -68,19 +68,19 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin']) {
                 });
 
                 function loadLog() {
-                    var oldscrollHeight = $("#chatbox")[0].scrollHeight - 20;
+                    // var oldscrollHeight = $("#chatbox")[0].scrollHeight - 20;
 
                     $.ajax({
                         url: "log.html",
                         cache: false,
                         success: function(html) {
                             $("#chatbox").html(html);
-                            var newscrollHeight = $("#chatbox")[0].scrollHeight - 20;
-                            if (newscrollHeight > oldscrollHeight) {
-                                $("#chatbox").animate({
-                                    scrollTop: newscrollHeight
-                                }, 'normal');
-                            }
+                            // var newscrollHeight = $("#chatbox")[0].scrollHeight - 20;
+                            // if (newscrollHeight > oldscrollHeight) {
+                            //     $("#chatbox").animate({
+                            //         scrollTop: newscrollHeight
+                            //     }, 'normal');
+                            // }
                         }
                     });
                 }

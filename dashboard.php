@@ -102,8 +102,8 @@ $korisnikQuery = mysqli_query($conn, $korisnikSql) or die(mysqli_error($error));
                                     } else {
                                         echo '<div class="col-md-12">';
                                     } ?>
-                                    <button id="obrisiKorisnika-<?php echo $korisnikRow['id']; ?>" class="btn btn-danger btn-sm w-100 <?php if ($_SESSION['id'] == $korisnikRow['id'] || ($korisnikRow['uloga'] == 'admin' && $_SESSION['role'] != 'owner')) echo 'd-none'; ?>">Obriši korisnika</button>
-                                    <script>
+                                    <a href="./snippets/obrisiKorisnika.php?id=<?php echo $korisnikRow['id']; ?>", id="obrisiKorisnika-<?php echo $korisnikRow['id']; ?>" class="btn btn-danger btn-sm w-100 <?php if ($_SESSION['id'] == $korisnikRow['id'] || ($korisnikRow['uloga'] == 'admin' && $_SESSION['role'] != 'owner')) echo 'd-none'; ?>">Obriši korisnika</a>
+                                    <!-- <script>
                                     $("#obrisiKorisnika-<?php echo $korisnikRow['id']; ?>").click(function() {
                                         var url ="./snippets/obrisiKorisnika.php?id=<?php echo $korisnikRow['id']; ?>";
                                         $.ajax({
@@ -117,13 +117,13 @@ $korisnikQuery = mysqli_query($conn, $korisnikSql) or die(mysqli_error($error));
                                             }
                                         });
                                     })
-                                    </script>
+                                    </script> -->
                                 </div>
                                 <div class=" col-md-6">
                                     <?php if ($_SESSION['role'] == 'owner') {
                                         if ($korisnikRow['uloga'] != 'admin') { ?>
-                                            <button id="postaviAdmina"class="btn btn-success btn-sm w-100">Postavi admina</button>
-                                        <script>
+                                            <a href="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=true", id="postaviAdmina"class="btn btn-success btn-sm w-100">Postavi admina</a>
+                                        <!-- <script>
                                             $("#postaviAdmina").click(function(){
                                                 var url ="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=true";
                                                 $.ajax({
@@ -137,12 +137,12 @@ $korisnikQuery = mysqli_query($conn, $korisnikSql) or die(mysqli_error($error));
                                                 }
                                              });
                                             })
-                                         </script>
+                                         </script> -->
                                            
                                         <?php } else { ?>
-                                            <button id="ukloniAdmina" class="btn btn-warning btn-sm w-100">Ukloni admina</button>
+                                            <a href="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=false", id="ukloniAdmina" class="btn btn-warning btn-sm w-100">Ukloni admina</a>
 
-                                            <script>
+                                            <!-- <script>
                                             $("#ukloniAdmina").click(function(){
                                                 var url ="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=false";
                                                 $.ajax({
@@ -155,13 +155,13 @@ $korisnikQuery = mysqli_query($conn, $korisnikSql) or die(mysqli_error($error));
                                                 console.log("Maknuto");
                                                 }
                                             });
-                                            })
+                                            }) -->
                                            
                                     <?php }
                                     } ?>
                                     
                                     
-                                    </script>  
+                                    <!-- </script>   -->
                                 </div>
                         </div>
                     <?php } ?>

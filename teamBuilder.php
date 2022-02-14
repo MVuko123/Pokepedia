@@ -145,7 +145,7 @@ $query = mysqli_query($conn, $sql) or die(mysqli_error($error));
                                         <?php } ?>
                                     </div>
                                     <div class="col-md-6 text-center p-3">
-                                        <p class="mt-3">Normal</p>
+                                        <p class="mt-3">Normal </p>
                                         <img id="prednjaS-<?php echo $row['id']; ?>" class="d-inline" src="<?php echo $row['prednjaSlika']; ?>" />
                                         <img id="zadnjaS-<?php echo $row['id']; ?>" class="d-none" src="<?php echo $row['zadnjaSlike']; ?>" />
                                     </div>

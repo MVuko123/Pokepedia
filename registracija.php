@@ -99,7 +99,7 @@ if (isset($_POST['reg_user'])) {
                                     <div class="mb-md-5 mt-md-4 pb-5">
                                         <h2 class="fw-bold mb-2 text-uppercase">Registracija</h2>
                                         <p class="text-white-50 mb-5">
-                                            Unesite vaše podatke
+                                            Unesite vaše podatke 
                                         </p>
 
                                         <div class="form-outline form-white mb-4">

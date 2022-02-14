@@ -50,7 +50,7 @@ include './snippets/provjeraTima.php';
                         cijelu Aziju (osim Južne Koreje), Australiju i Novi Zeland,
                         postoje još dvije podružnice koje se brinu za ostala tržišta,
                         "Pokémon Korea" se brine za Južnu Koreju, dok se "The Pokemon
-                        Company International" brine za sva ostala tržišta.
+                        Company International" brine za sva ostala tržišta. 
                     </p>
                     <h1 class="my-3">Pokémon</h1>
                     <p>
