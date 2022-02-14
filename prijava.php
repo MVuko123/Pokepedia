@@ -83,7 +83,7 @@ if (!empty($_POST["remember"])) {
                                             <label class="form-label" for="typePasswordX">Lozinka</label>
                                         </div>
                                         <p class="small mb-3 pb-lg-2">
-                                            <a class="text-white-50" href="#!">Zaboravili ste lozinku?</a>
+                                            <a class="text-white-50" href="#!">Zaboravili ste lozinku? </a>
                                         </p>
                                         <div class="form-check d-flex justify-content-center mb-4">
                                             <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" name="remember" />
