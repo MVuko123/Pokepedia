@@ -1,3 +1,15 @@
+
+<?php
+
+include_once './snippets/konekcija.php';
+
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -140,7 +152,7 @@
           </div>
         </div>
         </main>
-        <footer class="bg-dark text-center text-white text-lg-start">
+        <footer class="container-fluid bg-dark text-center text-white text-lg-start">
         <?php include './snippets/footer.html'; ?>
         </footer>  
   </body>

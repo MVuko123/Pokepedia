@@ -33,7 +33,6 @@ if (mysqli_num_rows($result) == 0) {
     $timpun = true;
 }
 
-//if ($timpun) echo '<h1>NEMOŽE</h1>';
 
 $korisnikSql = "SELECT * FROM korisnik";
 
@@ -102,16 +101,66 @@ $korisnikQuery = mysqli_query($conn, $korisnikSql) or die(mysqli_error($error));
                                     } else {
                                         echo '<div class="col-md-12">';
                                     } ?>
-                                    <a href="./snippets/obrisiKorisnika.php?id=<?php echo $korisnikRow['id']; ?>" class="btn btn-danger btn-sm w-100 <?php if ($_SESSION['id'] == $korisnikRow['id'] || ($korisnikRow['uloga'] == 'admin' && $_SESSION['role'] != 'owner')) echo 'd-none'; ?>">Obriši korisnika</a>
+                                    <a href="./snippets/obrisiKorisnika.php?id=<?php echo $korisnikRow['id']; ?>", id="obrisiKorisnika-<?php echo $korisnikRow['id']; ?>" class="btn btn-danger btn-sm w-100 <?php if ($_SESSION['id'] == $korisnikRow['id'] || ($korisnikRow['uloga'] == 'admin' && $_SESSION['role'] != 'owner')) echo 'd-none'; ?>">Obriši korisnika</a>
+                                    <!-- <script>
+                                    $("#obrisiKorisnika-<?php echo $korisnikRow['id']; ?>").click(function() {
+                                        var url ="./snippets/obrisiKorisnika.php?id=<?php echo $korisnikRow['id']; ?>";
+                                        $.ajax({
+                                            url: url,
+                                            type: "GET",
+                                            data: {},
+                                            cache: false,
+                                            dataType: "html",
+                                            success: function() {
+                                               console.log("Obrisano");
+                                            }
+                                        });
+                                    })
+                                    </script> -->
                                 </div>
                                 <div class=" col-md-6">
                                     <?php if ($_SESSION['role'] == 'owner') {
                                         if ($korisnikRow['uloga'] != 'admin') { ?>
-                                            <a href="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&param=true" class="btn btn-success btn-sm w-100">Postavi admina</a>
+                                            <a href="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=true", id="postaviAdmina"class="btn btn-success btn-sm w-100">Postavi admina</a>
+                                        <!-- <script>
+                                            $("#postaviAdmina").click(function(){
+                                                var url ="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=true";
+                                                $.ajax({
+                                                url: url,
+                                                type: "GET",
+                                                data: {},
+                                                cache: false,
+                                                dataType: "html",
+                                                success: function() {
+                                                console.log("Postavljen");
+                                                }
+                                             });
+                                            })
+                                         </script> -->
+                                           
                                         <?php } else { ?>
-                                            <a href="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&param=false" class="btn btn-warning btn-sm w-100">Ukloni admina</a>
+                                            <a href="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=false", id="ukloniAdmina" class="btn btn-warning btn-sm w-100">Ukloni admina</a>
+
+                                            <!-- <script>
+                                            $("#ukloniAdmina").click(function(){
+                                                var url ="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=false";
+                                                $.ajax({
+                                                url: url,
+                                                type: "GET",
+                                                data: {},
+                                                cache: false,
+                                                dataType: "html",
+                                                success: function() {
+                                                console.log("Maknuto");
+                                                }
+                                            });
+                                            }) -->
+                                           
                                     <?php }
                                     } ?>
+                                    
+                                    
+                                    <!-- </script>   -->
                                 </div>
                         </div>
                     <?php } ?>
@@ -176,7 +225,7 @@ $korisnikQuery = mysqli_query($conn, $korisnikSql) or die(mysqli_error($error));
         </div>
         </div>
     </main>
-    <footer class="bg-dark text-center text-white text-lg-start">
+    <footer class="container-fluid bg-dark text-center text-white text-lg-start">
         <?php include './snippets/footer.html'; ?>
     </footer>
 </body>

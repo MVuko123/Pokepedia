@@ -20,12 +20,12 @@ const fetchPokemon = async () => {
     }));
     diplayPokemon(pokemon);
   });*/
-
-  const url = `https://pokeapi.co/api/v2/pokemon?limit=898`;
+  
+  const url = `https://pokeapi.co/api/v2/pokemon?limit=905`;
   const res = await fetch(url);
   const data = await res.json();
   const pokemon = data.results.map((result, index) => ({
-    ...result, //spread operator, uzet ce sve iz rezultata
+    ...result,  //spread operator, uzet ce sve iz rezultata
     id: index + 1,
     image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
       index + 1
@@ -66,31 +66,33 @@ const displayPopup = (pokeman) => {
   const sbimage = pokeman.sprites["back_shiny"];
   const htmlString = `
     <div class="popup">
-    <button id="closeBtn" onclick="closePopup()">Close</button>  
+    <button id="closeBtn" onclick="closePopup()">Close</button>
     <div class="card">
         <div class="column">
-        <img class="card-image" src="${image}"/> 
+        <img class="card-image" src="${image}"/>
         </div>
         <div class="column">
-        <img class="card-image" src="${bimage}"/> 
+        <img class="card-image" src="${bimage}"/>
         </div>
         <div class="column1">
-        <img class="card-image" src="${simage}"/> 
+        <img class="card-image" src="${simage}"/>
         </div>
         <div class="column1">
-        <img class="card-image" src="${sbimage}"/> 
+        <img class="card-image" src="${sbimage}"/>
         </div>
         <h2 class="card-title">${pokeman.id}. ${pokeman.name}</h2>
         <p><small>| Visina: </small> ${
           pokeman.height / 10
         } M | <small>Težina: </small> ${
     pokeman.weight / 10
-  } Kg | <small>Tip: </small> ${type} | <small> </small> </p> 
-    </div>  
+  } Kg | <small>Tip: </small> ${type} | <small class="type ${type}"> </small> </p>
+    </div>
     </div>
   `;
   pokedex.innerHTML = htmlString + pokedex.innerHTML;
 };
+
+// dodati tipove
 
 const closePopup = () => {
   const popup = document.querySelector(".popup");

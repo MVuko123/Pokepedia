@@ -6,12 +6,7 @@ $output = "";
 
 if (!isset($_SESSION['id'])) header('Location: ./index.php');
 
-function consoleLog($data)
-{
-    echo '<script>';
-    echo 'console.log(' . json_encode($data) . ')';
-    echo '</script>';
-}
+
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -126,7 +121,7 @@ $query = mysqli_query($conn, $sql) or die(mysqli_error($error));
                             <div class="border text-center p-3" id="pokemonCard">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h1 id="modalName" class="my-3" data-bs-toggle="modal" data-bs-target="#exampleModal-<?php echo $row['id']; ?>"><?php echo $row['naziv']; ?><span class="text-muted h3">
+                                        <h1 id="modalName" class="my-3" data-bs-toggle="modal" data-bs-target="#pokemonModal-<?php echo $row['id']; ?>"><?php echo $row['naziv']; ?><span class="text-muted h3">
                                                 <?php if ($row['id'] < 10) {
                                                     echo '#00' . $row['id'];
                                                 } else if ($row['id'] > 9 && $row['id'] < 100) {
@@ -145,7 +140,7 @@ $query = mysqli_query($conn, $sql) or die(mysqli_error($error));
                                         <?php } ?>
                                     </div>
                                     <div class="col-md-6 text-center p-3">
-                                        <p class="mt-3">Normal</p>
+                                        <p class="mt-3">Normal </p>
                                         <img id="prednjaS-<?php echo $row['id']; ?>" class="d-inline" src="<?php echo $row['prednjaSlika']; ?>" />
                                         <img id="zadnjaS-<?php echo $row['id']; ?>" class="d-none" src="<?php echo $row['zadnjaSlike']; ?>" />
                                     </div>
@@ -175,6 +170,7 @@ $query = mysqli_query($conn, $sql) or die(mysqli_error($error));
                                         });
                                     });
                                 </script>
+
                                 <?php
                                 if (isInTeam($row['id'], $pokemoniutimu)) { ?>
                                     <form action="./snippets/ukloni.php?id=<?php echo $row['id']; ?>" method="POST">
@@ -185,12 +181,13 @@ $query = mysqli_query($conn, $sql) or die(mysqli_error($error));
                                         <button class="btn btn-dark" <?php if ($timpun) echo 'disabled'; ?> type="submit">Dodaj</button>
                                     </form>
                                 <?php } ?>
+
                             </div>
-                            <div class="modal fade" id="exampleModal-<?php echo $row['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="pokemonModal-<?php echo $row['id']; ?>" tabindex="-1" aria-labelledby="pokemonModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="row modal-title" id="exampleModalLabel">
+                                            <h5 class="row modal-title" id="pokemonModalLabel">
                                                 <div class="col-md-12 text-center">
                                                     <?php echo $row['naziv']; ?>
                                                 </div>
@@ -199,7 +196,7 @@ $query = mysqli_query($conn, $sql) or die(mysqli_error($error));
                                         <div class="modal-body row">
                                             <div class="col-md-12">
                                                 <h5>Opis:</h5>
-                                                <p><?php echo $row['opis']; ?></p>
+                                                <p><?php echo $row['opis']; ?></p>                                             
                                                 <hr>
                                             </div>
                                             <div class="col-md-12">
@@ -303,7 +300,7 @@ $query = mysqli_query($conn, $sql) or die(mysqli_error($error));
             </div>
         </div>
     </main>
-    <footer class="bg-dark text-center text-white text-lg-start">
+    <footer class=" container-fluid bg-dark text-center text-white text-lg-start">
         <?php include './snippets/footer.html'; ?>
     </footer>
 </body>

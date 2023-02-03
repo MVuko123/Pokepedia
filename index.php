@@ -6,6 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
+
 include './snippets/provjeraTima.php';
 
 ?>
@@ -23,25 +24,20 @@ include './snippets/provjeraTima.php';
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-a11y="true"></script>
     <link rel="shortcut icon" type="image/png" href="assets/slike/poke_fav.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/css.css" />
     <title>Poképedia</title>
 </head>
 
-<body id="pocetna-body">
+<body id="pocetna-body" style="min-width:100%">
     <header><?php include './navbar.php'; ?></header>
     <main>
         <div class="container-fluid my-5">
             <div class="row">
-                <!-- <button
-                    type="button"
-                    class="btn btn-outline-dark btn-floating"
-                    id="btn-back-to-top"
-                    >
-                    <img src="./assets/slike/to_top.png" alt="" style="max-width: 32px" />
-                 </button> -->
                 <div class="col-md-3 my-3 my-md-0">
-                    <h3 class="yt_kanal">Službeni Pokémon YouTube Kanal</h3>
-                    <div class="elfsight-app-9ad27e5f-f310-4f24-94ba-3008b75664d0"></div>
+                    <h3 class="yt_kanal">Službeni Pokémon YouTube Kanal</h3>                   
+                    <div class="elfsight-app-af929599-4eac-4b4d-a2d2-7a64851b5877"></div>
+                    <!-- <div class="elfsight-app-9ad27e5f-f310-4f24-94ba-3008b75664d0"></div> -->
                 </div>
                 <div class="col-md-6 text-white" id="testni_div">
                     <h1 class="my-3 my-md-0">Pokémon Tvrtka</h1>
@@ -55,7 +51,7 @@ include './snippets/provjeraTima.php';
                         cijelu Aziju (osim Južne Koreje), Australiju i Novi Zeland,
                         postoje još dvije podružnice koje se brinu za ostala tržišta,
                         "Pokémon Korea" se brine za Južnu Koreju, dok se "The Pokemon
-                        Company International" brine za sva ostala tržišta.
+                        Company International" brine za sva ostala tržišta. 
                     </p>
                     <h1 class="my-3">Pokémon</h1>
                     <p>
@@ -82,14 +78,14 @@ include './snippets/provjeraTima.php';
                     <h3 class="text-white text-center">
                         Službeni Pokémon Twitter Račun
                     </h3>
-                    <a class="twitter-timeline" data-height="76.5vh" data-theme="dark" href="https://twitter.com/Pokemon?ref_src=twsrc%5Etfw">Tweets by Pokemon</a>
+                    <a class="twitter-timeline" data-height="600vh" data-theme="dark" href="https://twitter.com/Pokemon?ref_src=twsrc%5Etfw">Tweets by Pokemon</a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
         </div>
-        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+        <script src="https://apps.elfsight.com/p/platform.js" defer></script><
     </main>
-    <footer class="bg-dark text-center text-white text-lg-start mx-0px">
+    <footer class="container-fluid bg-dark text-center text-white text-lg-start mx-0px w-100">
         <?php include './snippets/footer.html'; ?>
     </footer>
 </body>

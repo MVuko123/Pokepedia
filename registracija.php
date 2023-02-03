@@ -86,9 +86,9 @@ if (isset($_POST['reg_user'])) {
     <main>
 
         <div class="container-fluid mx-auto my-5">
-            <button type="button" class="btn btn-outline-dark btn-floating" id="btn-back-to-top">
+            <!-- <button type="button" class="btn btn-outline-dark btn-floating" id="btn-back-to-top">
                 <img src="assets/slike/to_top.png" alt="" style="max-width: 32px" />
-            </button>
+            </button> -->
 
             <form action="" method="post">
                 <div class="container-fluid py-5 h-100">
@@ -99,7 +99,7 @@ if (isset($_POST['reg_user'])) {
                                     <div class="mb-md-5 mt-md-4 pb-5">
                                         <h2 class="fw-bold mb-2 text-uppercase">Registracija</h2>
                                         <p class="text-white-50 mb-5">
-                                            Unesite vaše podatke
+                                            Unesite vaše podatke 
                                         </p>
 
                                         <div class="form-outline form-white mb-4">
@@ -182,7 +182,7 @@ if (isset($_POST['reg_user'])) {
             </div>
             <script src="assets/skripte/pocetna.js"></script>
     </main>
-    <footer class="bg-dark text-center text-white text-lg-start">
+    <footer class="container-fluid bg-dark text-center text-white text-lg-start">
         <?php include './snippets/footer.html'; ?>
     </footer>
 </body>

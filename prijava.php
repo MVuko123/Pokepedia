@@ -6,6 +6,7 @@ $msg = 'Unesite Vaše podatke.';
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+
 $_SESSION['email'] = "";
 
 if (isset($_POST['login']) && !empty($_POST['email']) && !empty($_POST['lozinka'])) {
@@ -82,10 +83,10 @@ if (!empty($_POST["remember"])) {
                                             <label class="form-label" for="typePasswordX">Lozinka</label>
                                         </div>
                                         <p class="small mb-3 pb-lg-2">
-                                            <a class="text-white-50" href="#!">Zaboravili ste lozinku?</a>
+                                            <a class="text-white-50" href="#!">Zaboravili ste lozinku? </a>
                                         </p>
                                         <div class="form-check d-flex justify-content-center mb-4">
-                                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" name="remeber" />
+                                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" name="remember" />
                                             <label class="form-check-label" for="form2Example3">
                                                 Zapamti me.
                                             </label>
@@ -108,7 +109,7 @@ if (!empty($_POST["remember"])) {
             </form>
             <script src="assets/skripte/pocetna.js"></script>
     </main>
-    <footer class="bg-dark text-center text-white text-lg-start">
+    <footer class="container-fluid bg-dark text-center text-white text-lg-start">
         <?php include './snippets/footer.html'; ?>
     </footer>
 </body>

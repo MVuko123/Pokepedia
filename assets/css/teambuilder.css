@@ -1,3 +1,4 @@
+
 #pokemonCard {
     border: 1px solid black;
     box-shadow: 3px 3px 8px black;
@@ -11,7 +12,7 @@
 @keyframes pop{ 50%  { transform: scale(1.25); } }
 
 
-/* ! TYPES */
+/* https://github.com/justingolden21/pokemon-types-css/blob/master/types.css */
 span.type {
 	border: 2px solid #000;
 	border-radius: 20px;
@@ -30,7 +31,7 @@ span.type.sm {
 	padding: 0px 5px;
 	margin: 0px;
 }
-/*https://bulbapedia.bulbagarden.net/wiki/Category:Type_color_templates*/
+
 span.type.normal {
 	background-color: #A8A878;
 	border-color: #6D6D4E;

@@ -1,3 +1,14 @@
+<?php
+
+include_once './snippets/konekcija.php';
+
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,9 +36,9 @@
       src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
       data-auto-a11y="true"
     ></script>
-    <link rel="shortcut icon" type="image/png" href="../assets/slike/poke_fav.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/slike/poke_fav.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../assets/skripte/include.js"></script>
+    <script src="./assets/skripte/include.js"></script>
     <title>Poképedia</title>
   </head>
   <body id="nintendo3DS1">
@@ -115,7 +126,7 @@
           </div>
         </div>
       </main>
-      <footer class="bg-dark text-center text-white text-lg-start">
+      <footer class="container-fluid bg-dark text-center text-white text-lg-start">
         <?php include './snippets/footer.html'; ?>
     </footer>  
   
