@@ -36,7 +36,7 @@ if (session_status() === PHP_SESSION_NONE) {
       src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
       data-auto-a11y="true"
     ></script>
-    <link rel="shortcut icon" type="image/png" href="../assets/slike/poke_fav.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/slike/poke_fav.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../assets/skripte/include.js"></script>
     <title>Poképedia</title>
