@@ -123,7 +123,7 @@ if (isset($_POST['reg_user'])) {
                                         </div>
 
                                         <div class="form-check d-flex justify-content-center mb-5">
-                                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" name="checkbox" />
+                                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" name="checkbox" enabled/>
                                             <label class="form-check-label" for="form2Example3">
                                                 Prihvaćam sve navedene <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">uvjete korištenja</a>.
                                             </label>

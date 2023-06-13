@@ -41,6 +41,8 @@ if (session_status() === PHP_SESSION_NONE) {
                         <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                             <a href="chat.php" class="dropdown-item" target="_blank">Chat</a>
                             <a href="teamBuilder.php" class="dropdown-item" target="_blank">Team Builder</a>
+                            <a href="tournament.php" class="dropdown-item">Tournament</a>
+                            <a href="ljestvica.php" class="dropdown-item">Ljestvica</a>
                             <?php if ($_SESSION['role'] == 'admin' || $_SESSION['role'] == 'owner') { ?>
                                 <div class="dropdown-divider"></div>
                                 <a href="dashboard.php" class="dropdown-item" target="_blank">Dashboard</a>

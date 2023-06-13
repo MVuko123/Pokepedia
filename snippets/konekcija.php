@@ -1,8 +1,10 @@
 <?php
 
 $hostname = "localhost";
-$username = "edunova";
-$password = "edunova";
+// $username = "edunova";
+$username = "root";
+// $password = "edunova";
+$password = "";
 $db = "pokepedia_webprojekt";
 
 $conn = new mysqli($hostname, $username, $password, $db);

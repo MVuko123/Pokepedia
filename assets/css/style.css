@@ -159,3 +159,18 @@ a:hover {
   }
 
 
+#div-game-teams{
+  width: 200px;
+}
+
+#div-game-control{
+  width: 200px;
+}
+
+.td-field{
+  background-color: black;
+}
+
+.table-play-area-2{
+  background-color: aqua;
+}
