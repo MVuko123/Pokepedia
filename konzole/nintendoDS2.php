@@ -1,6 +1,6 @@
 <?php
 
-include_once './snippets/konekcija.php';
+include_once '../snippets/konekcija.php';
 
 if (session_status() === PHP_SESSION_NONE) {
   session_start();
@@ -14,7 +14,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/css.css" />
+    <link rel="stylesheet" href="../assets/css/css.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -41,7 +41,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <title>Poképedia</title>
   </head>
   <body id="nintendoDS2">
-  <header><?php include './navbar.php'; ?></header>
+  <header><?php include './navbarKonzole.php'; ?></header>
     <main class="mt-5">
       <div class="container-fluid">
         <div class="row container-fluid">
@@ -67,7 +67,7 @@ if (session_status() === PHP_SESSION_NONE) {
             </p>
             <img
               class="col-md-12"
-              src="./assets/slike/nintednoDS.jpg"
+              src="../assets/slike/nintednoDS.jpg"
               alt="Nintendo DS"
             />
           </div>
@@ -104,12 +104,12 @@ if (session_status() === PHP_SESSION_NONE) {
             <div class="row">
               <img
                 class="col-md-6"
-                src="./assets/slike/pkmn_black.jpg"
+                src="../assets/slike/pkmn_black.jpg"
                 alt="Pokemon Black"
               />
               <img
                 class="col-md-6"
-                src="./assets/slike/pkmn_white.jpg"
+                src="../assets/slike/pkmn_white.jpg"
                 alt="Pokemon white"
               />
             </div>
@@ -117,12 +117,12 @@ if (session_status() === PHP_SESSION_NONE) {
             <div class="row">
               <img
                 class="col-md-6"
-                src="./assets/slike/pkmn_black2.jpg"
+                src="../assets/slike/pkmn_black2.jpg"
                 alt="Pokemon Black2"
               />
               <img
                 class="col-md-6"
-                src="./assets/slike/pkmn_white2.jpg"
+                src="../assets/slike/pkmn_white2.jpg"
                 alt="Pokemon White2"
               />
             </div>
@@ -130,7 +130,7 @@ if (session_status() === PHP_SESSION_NONE) {
         </div>
     </main>
     <footer class="container-fluid bg-dark text-center text-white text-lg-start">
-        <?php include './snippets/footer.html'; ?>
+        <?php include './footerKonzole.html'; ?>
     </footer>  
   
   </body>

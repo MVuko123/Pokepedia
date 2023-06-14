@@ -1,6 +1,6 @@
 <?php
 
-include_once './snippets/konekcija.php';
+include_once '../snippets/konekcija.php';
 
 if (session_status() === PHP_SESSION_NONE) {
   session_start();
@@ -15,7 +15,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/css.css" />
+    <link rel="stylesheet" href="../assets/css/css.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -36,13 +36,13 @@ if (session_status() === PHP_SESSION_NONE) {
       src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
       data-auto-a11y="true"
     ></script>
-    <link rel="shortcut icon" type="image/png" href="./assets/slike/poke_fav.png" />
+    <link rel="shortcut icon" type="image/png" href="../assets/slike/poke_fav.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../assets/skripte/include.js"></script>
     <title>Poképedia</title>
   </head>
   <body id="nintendoDS1">
-  <header><?php include './navbar.php'; ?></header>
+  <header><?php include './navbarKonzole.php'; ?></header>
     <main class="mt-5">
       <div class="container-fluid">
         <div class="row container-fluid">
@@ -68,7 +68,7 @@ if (session_status() === PHP_SESSION_NONE) {
             </p>
             <img
               class="col-md-12"
-              src="./assets/slike/nintednoDS.jpg"
+              src="../assets/slike/nintednoDS.jpg"
               alt="Nintendo DS"
             />
           </div>
@@ -120,12 +120,12 @@ if (session_status() === PHP_SESSION_NONE) {
             <div class="row">
               <img
                 class="col-md-6"
-                src="./assets/slike/pkmn_diamond.jpg"
+                src="../assets/slike/pkmn_diamond.jpg"
                 alt="Pokemon Diamond"
               />
               <img
                 class="col-md-6"
-                src="./assets/slike/pkmn_pearl.jpg"
+                src="../assets/slike/pkmn_pearl.jpg"
                 alt="Pokemon Pearl"
               />
             </div>
@@ -133,12 +133,12 @@ if (session_status() === PHP_SESSION_NONE) {
             <div class="row">
               <img
                 class="col-md-6"
-                src="./assets/slike/pkmn_platinum.jpg"
+                src="../assets/slike/pkmn_platinum.jpg"
                 alt="Pokemon Platinum"
               />
               <img
                 class="col-md-6"
-                src="./assets/slike/pkmn_platinum_jpn.jpg"
+                src="../assets/slike/pkmn_platinum_jpn.jpg"
                 alt="Pokemon PlatinumJpn"
               />
             </div>
@@ -146,12 +146,12 @@ if (session_status() === PHP_SESSION_NONE) {
             <div class="row">
               <img
                 class="col-md-6"
-                src="./assets/slike/pkmn_soulsilver.jpg"
+                src="../assets/slike/pkmn_soulsilver.jpg"
                 alt="Pokemon SoulSilver"
               />
               <img
                 class="col-md-6"
-                src="./assets/slike/pkmn_heartgold.jpg"
+                src="../assets/slike/pkmn_heartgold.jpg"
                 alt="Pokemon HeartGold"
               />
             </div>
@@ -159,7 +159,7 @@ if (session_status() === PHP_SESSION_NONE) {
         </div>
     </main>
     <footer class="container-fluid bg-dark text-center text-white text-lg-start">
-        <?php include './snippets/footer.html'; ?>
+        <?php include './footerKonzole.html'; ?>
     </footer>  
   </body>
 </html>

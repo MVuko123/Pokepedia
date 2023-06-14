@@ -1,6 +1,6 @@
 <?php
 
-include_once './snippets/konekcija.php';
+include_once '../snippets/konekcija.php';
 
 if (session_status() === PHP_SESSION_NONE) {
   session_start();
@@ -14,7 +14,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/css.css" />
+    <link rel="stylesheet" href="../assets/css/css.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -35,12 +35,12 @@ if (session_status() === PHP_SESSION_NONE) {
       src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
       data-auto-a11y="true"
     ></script>
-    <link rel="shortcut icon" type="image/png" href="./assets/slike/poke_fav.png" />
+    <link rel="shortcut icon" type="image/png" href="../assets/slike/poke_fav.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Poképedia</title>
   </head>
   <body id="gameBoy">
-    <header><?php include './navbar.php'; ?></header>
+    <header><?php include './navbarKonzole.php'; ?></header>
     <main class="mt-5">
       <div class="container-fluid">
         <div class="row container-fluid">
@@ -59,7 +59,7 @@ if (session_status() === PHP_SESSION_NONE) {
               "Tetris", "Pokémon", "Dokey Kong Land", "Kirby's Dream Land", "Ms.
               Pac-Man", "Super Mario", "Yoshi" i mnoge druge.
             </p>
-            <img class="col-md-8" src="./assets/slike/gameBoy.jpg" alt="Game Boy" />
+            <img class="col-md-8" src="../assets/slike/gameBoy.jpg" alt="Game Boy" />
           </div>
           <div class="col-md-4 text-white" id="testni_div">
             <h1>Igrice</h1>
@@ -102,37 +102,37 @@ if (session_status() === PHP_SESSION_NONE) {
             <div class="row">
               <img
                 class="col-md-6"
-                src="./assets/slike/pkmn_red_jpn.jpg"
+                src="../assets/slike/pkmn_red_jpn.jpg"
                 alt="Pokemon Red"
               />
               <img
                 class="col-md-6"
-                src="./assets/slike/pkmn_green_jpn.jpg"
+                src="../assets/slike/pkmn_green_jpn.jpg"
                 alt="Pokemon Red"
               />
             </div>
             <div class="row">
               <img
                 class="col-md-6"
-                src="./assets/slike/pkmn_red.jpg"
+                src="../assets/slike/pkmn_red.jpg"
                 alt="Pokemon Red"
               />
 
               <img
                 class="col-md-6"
-                src="./assets/slike/pkmn_blue.jpg"
+                src="../assets/slike/pkmn_blue.jpg"
                 alt="Pokemon Blue"
               />
             </div>
             <div class="row">
               <img
                 class="col-md-6"
-                src="./assets/slike/pkmn_yellow.jpg"
+                src="../assets/slike/pkmn_yellow.jpg"
                 alt="Pokemon Red"
               />
               <img
                 class="col-md-6"
-                src="./assets/slike/pkmn_yellow_jpn.jpg"
+                src="../assets/slike/pkmn_yellow_jpn.jpg"
                 alt="Pokemon Red"
               />
             </div>
@@ -141,7 +141,7 @@ if (session_status() === PHP_SESSION_NONE) {
       </div>
     </main>
     <footer class="container-fluid bg-dark text-center text-white text-lg-start">
-        <?php include './snippets/footer.html'; ?>
+        <?php include './footerKonzole.html'; ?>
     </footer>
   </body>
 </html>
