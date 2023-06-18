@@ -6,7 +6,7 @@
     }
 
     if(!isset($_GET['user1']) || !isset($_GET['user2'])){
-        header('Location: ./index.php');
+        header('Location: ../index.php');
     }
     
     print_r($_GET);
