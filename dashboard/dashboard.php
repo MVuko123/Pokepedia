@@ -1,6 +1,6 @@
 <?php
 
-include './snippets/konekcija.php';
+include '../snippets/konekcija.php';
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -9,7 +9,7 @@ if (session_status() === PHP_SESSION_NONE) {
 if (!isset($_SESSION['role']) || ($_SESSION['role'] != 'admin' && $_SESSION['role'] != 'owner')) header('Location: ./index.php');
 
 
-include './snippets/provjeraTima.php';
+include '../snippets/provjeraTima.php';
 
 
 /* ! Dohvati pokemone u trenutnom timu */
@@ -48,20 +48,20 @@ $korisnikQuery = mysqli_query($conn, $korisnikSql) or die(mysqli_error($error));
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/css.css" />
-    <link rel="stylesheet" href="./assets/css/teambuilder.css" />
+    <link rel="stylesheet" href="../assets/css/css.css" />
+    <link rel="stylesheet" href="../assets/css/teambuilder.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-a11y="true"></script>
-    <link rel="shortcut icon" type="image/png" href="./assets/slike/poke_fav.png" />
+    <link rel="shortcut icon" type="image/png" href="../assets/slike/poke_fav.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Poképedia</title>
 </head>
 
 
 <body id="dashboard-body">
-    <header><?php include './navbar.php'; ?></header>
+    <header><?php include '../navbar.php'; ?></header>
     <main>
         <div class="container-fluid mt-5">
             <h1 class="text-center text-white py-3 mb-5">Admin Dashboard</h1>
@@ -101,69 +101,21 @@ $korisnikQuery = mysqli_query($conn, $korisnikSql) or die(mysqli_error($error));
                                     } else {
                                         echo '<div class="col-md-12">';
                                     } ?>
-                                    <a href="./snippets/obrisiKorisnika.php?id=<?php echo $korisnikRow['id']; ?>", id="obrisiKorisnika-<?php echo $korisnikRow['id']; ?>" class="btn btn-danger btn-sm w-100 <?php if ($_SESSION['id'] == $korisnikRow['id'] || ($korisnikRow['uloga'] == 'admin' && $_SESSION['role'] != 'owner')) echo 'd-none'; ?>">Obriši korisnika</a>
-                                    <!-- <script>
-                                    $("#obrisiKorisnika-<?php echo $korisnikRow['id']; ?>").click(function() {
-                                        var url ="./snippets/obrisiKorisnika.php?id=<?php echo $korisnikRow['id']; ?>";
-                                        $.ajax({
-                                            url: url,
-                                            type: "GET",
-                                            data: {},
-                                            cache: false,
-                                            dataType: "html",
-                                            success: function() {
-                                               console.log("Obrisano");
-                                            }
-                                        });
-                                    })
-                                    </script> -->
+                                    <a href="./obrisiKorisnika.php?id=<?php echo $korisnikRow['id']; ?>", id="obrisiKorisnika-<?php echo $korisnikRow['id']; ?>" class="btn btn-danger btn-sm w-100 <?php if ($_SESSION['id'] == $korisnikRow['id'] || ($korisnikRow['uloga'] == 'admin' && $_SESSION['role'] != 'owner')) echo 'd-none'; ?>">Obriši korisnika</a>
                                 </div>
                                 <div class=" col-md-6">
                                     <?php if ($_SESSION['role'] == 'owner') {
                                         if ($korisnikRow['uloga'] != 'admin') { ?>
-                                            <a href="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=true", id="postaviAdmina"class="btn btn-success btn-sm w-100">Postavi admina</a>
-                                        <!-- <script>
-                                            $("#postaviAdmina").click(function(){
-                                                var url ="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=true";
-                                                $.ajax({
-                                                url: url,
-                                                type: "GET",
-                                                data: {},
-                                                cache: false,
-                                                dataType: "html",
-                                                success: function() {
-                                                console.log("Postavljen");
-                                                }
-                                             });
-                                            })
-                                         </script> -->
+                                            <a href="./postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=true", id="postaviAdmina"class="btn btn-success btn-sm w-100">Postavi admina</a>
                                            
                                         <?php } else { ?>
-                                            <a href="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=false", id="ukloniAdmina" class="btn btn-warning btn-sm w-100">Ukloni admina</a>
-
-                                            <!-- <script>
-                                            $("#ukloniAdmina").click(function(){
-                                                var url ="./snippets/postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=false";
-                                                $.ajax({
-                                                url: url,
-                                                type: "GET",
-                                                data: {},
-                                                cache: false,
-                                                dataType: "html",
-                                                success: function() {
-                                                console.log("Maknuto");
-                                                }
-                                            });
-                                            }) -->
+                                            <a href="./postaviAdmina.php?id=<?php echo $korisnikRow['id']; ?>&isNotAdmin=false", id="ukloniAdmina" class="btn btn-warning btn-sm w-100">Ukloni admina</a>
                                            
                                     <?php }
                                     } ?>
-                                    
-                                    
-                                    <!-- </script>   -->
                                 </div>
-                        </div>
-                    <?php } ?>
+                             </div>
+                            <?php } ?>
                     </div>
                     <div class="p-3 d-none cardKorisnik" id="korisnikCardZadnja-<?php echo $korisnikRow['id']; ?>">
                         <div class="col-md-12">
@@ -226,7 +178,7 @@ $korisnikQuery = mysqli_query($conn, $korisnikSql) or die(mysqli_error($error));
         </div>
     </main>
     <footer class="container-fluid bg-dark text-center text-white text-lg-start">
-        <?php include './snippets/footer.html'; ?>
+        <?php include '../snippets/footer.html'; ?>
     </footer>
 </body>
 

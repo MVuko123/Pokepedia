@@ -83,7 +83,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin']) {
             });
             $("#exit").click(function() {
                 var exit = confirm("Jeste li sigurni da želite napustiti chat?");
-                if (exit == true) window.location = "../snippets/logoutChat.php";
+                if (exit == true) window.location = "./logoutChat.php";
             });
         </script>
 </body>

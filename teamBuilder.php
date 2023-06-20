@@ -48,7 +48,6 @@ if (mysqli_num_rows($result) == 0) {
     $timpun = true;
 }
 
-//if ($timpun) echo '<h1>NEMOŽE</h1>';
 
 $sql = "SELECT * FROM pokemon";
 
@@ -56,7 +55,6 @@ $sql = "SELECT * FROM pokemon";
 if (isset($_POST['search'])) {
 
     $search_term = mysqli_real_escape_string($conn, $_POST['search_box']);
-    //$search_term = preg_replace("#[^0-9a-z]#i","", $_POST['search_box']);
 
     if ($search_term == "") $sql;
     else {

@@ -89,7 +89,7 @@ while ($row = $result_tim->fetch_assoc()) {
                     echo "<td>" . $value['nadimak'] . "</td>";
                     echo "<td>" . implode(", ", $pokes) . "</td>";
                     echo "<td>" .
-                    "<button onclick=pickUser($key,'$username') class=\"btn btn-primary\">Odaberi</button>
+                    "<button onclick=pickUser($key,'$username') class=\"btn btn-primary\" >Odaberi</button>
                     <input type='hidden' value='" . $key . "' name='id'>
                     <input type='hidden' value='" . $value['nadimak'] . "' name='nadimak'>
                     </td>";

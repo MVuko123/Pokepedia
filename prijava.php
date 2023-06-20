@@ -32,11 +32,9 @@ if (isset($_POST['login']) && !empty($_POST['email']) && !empty($_POST['lozinka'
 if (!empty($_POST["remember"])) {
     setcookie("email", $_POST["email"], time() + 3600);
     setcookie("lozinka", $_POST["lozinka"], time() + 3600);
-    // echo "Cookies Set Successfuly";
 } else {
     setcookie("email", "");
     setcookie("lozinka", "");
-    // echo "Cookies Not Set";
 }
 ?>
 

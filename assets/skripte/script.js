@@ -3,23 +3,6 @@ const pokedex = document.getElementById("pokedex"); //dohvaća listu
 console.log(pokedex);
 
 const fetchPokemon = async () => {
-  /*const promimes = [];
-  for (let i = 1; i <= 151; i++) {
-    const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-    promimes.push(fetch(url).then((res) => res.json())); //optimzacija za vrijeme
-  }
-
-  Promise.all(promimes).then((results) => {
-    //svi ce paralelno se izvrsiti, te imamo pristup arrayu
-    const pokemon = results.map((data) => ({
-      //ide kroz array i stvara novi array u formatu koji smo predali
-      name: data.name,
-      id: data.id,
-      image: data.sprites["front_default"],
-      type: data.types.map((type) => type.type.name).join(","),
-    }));
-    diplayPokemon(pokemon);
-  });*/
   
   const url = `https://pokeapi.co/api/v2/pokemon?limit=905`;
   const res = await fetch(url);
@@ -52,7 +35,7 @@ const displayPokemon = (pokemon) => {
 
 const selectPokemon = async (id) => {
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-  const res = await fetch(url); //ceka da "promise" vrati rezultat
+  const res = await fetch(url); 
   const pokeman = await res.json();
   displayPopup(pokeman);
 };

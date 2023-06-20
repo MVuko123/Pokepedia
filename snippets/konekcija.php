@@ -1,9 +1,7 @@
 <?php
 
 $hostname = "localhost";
-// $username = "edunova";
 $username = "root";
-// $password = "edunova";
 $password = "";
 $db = "pokepedia_webprojekt";
 
