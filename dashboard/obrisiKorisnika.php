@@ -1,6 +1,6 @@
 <?php
 
-include_once './konekcija.php';
+include_once '../snippets/konekcija.php';
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
