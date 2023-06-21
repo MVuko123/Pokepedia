@@ -61,7 +61,7 @@ $korisnikQuery = mysqli_query($conn, $korisnikSql) or die(mysqli_error($error));
 
 
 <body id="dashboard-body">
-    <header><?php include '../navbar.php'; ?></header>
+    <header><?php include './navbarD.php'; ?></header>
     <main>
         <div class="container-fluid mt-5">
             <h1 class="text-center text-white py-3 mb-5">Admin Dashboard</h1>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2023 at 02:17 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Jun 21, 2023 at 07:04 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,19 +33,22 @@ CREATE TABLE `korisnik` (
   `email` varchar(60) DEFAULT NULL,
   `lozinka` varchar(255) DEFAULT NULL,
   `uloga` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `korisnik`
 --
 
 INSERT INTO `korisnik` (`id`, `nadimak`, `email`, `lozinka`, `uloga`) VALUES
-(4, 'MVuko123', 'vuko.marin52@gmail.com', '$2y$10$YNTRJBlEcda06lu4.7x9ZONmLxeOKbPIfzYIsRIgJVvnNM7EjcAki', 'korisnik'),
-(5, 'Admin', 'admin@admin.com', '$2y$10$2pXdI9eD.f0IjDvsL6zBHe6J3vBS/UXeWe9UhScXnbFItzHb1i0i6', 'admin'),
-(8, 'ne', 'ne@ne.com', '$2y$10$gIo6ACjhLzSLOYFTjrPtBembsuhRDAIfj1vbHNqBf5VPlUiY6wvFK', 'korisnik'),
-(9, 'PPero', 'pero@gmail.com', '$2y$10$bBuLf2R/CFSsQyxnKh1n5.9w2r9aHL5Q61/ey6rzlhR0QA6mSVf6m', 'korisnik'),
-(10, 'shellawk', 'shellawk@gmail.com', '$2y$10$.5EEmvh9RiBKSq8jhXE9EOwNhgcP/06tQALRMyipLMr7znc/cS5h6', 'korisnik'),
-(11, 'Lawrence', 'lawrenceochieng08@gmail.com', '$2y$10$Dnl2j1D3GYGHZ/SBz3/wCuo7h6KEyPVle1VL1X4x9Wgvrzm5.FGF2', 'korisnik');
+(4, 'MVuko123', 'vuko.marin52@gmail.com', '$2y$10$YNTRJBlEcda06lu4.7x9ZONmLxeOKbPIfzYIsRIgJVvnNM7EjcAki', 'owner'),
+(19, 'jure123', 'jure@gmail.com', '$2y$10$XNWsHic6myEzpfbOqtojrel1NT7JQ6AOa6zGNVXhrDeFzlAC0pNQm', 'admin'),
+(20, 'Djuro123', 'djuro@gmail.com', '$2y$10$2ovFRBBEus3i5YqylI4Ih.fl9XOx4Cth279kB6sqZWs0thkc6Pdpq', 'korisnik'),
+(21, 'pero123', 'pero@gmail.com', '$2y$10$chO0Dthucdm02lGADpdI5OPxB4Kkn9que4sFxtjASDSUsAlz81p5q', 'korisnik'),
+(22, 'ne', 'ne@gmail.com', '$2y$10$avRuB5WmMEQ0YfiOAywx2uu5QG6sD1jK/TzeTmqXwKAVzbGM9u3tO', 'korisnik'),
+(23, 'da', 'da@gmail.com', '$2y$10$xuaxsn0heB3byo/KW6oBQ.j.Pyk5H2wUPp6qnV5WMvDXZ7MRZrOsq', 'korisnik'),
+(24, 'Šimo1', 'simo@gmail.com', '$2y$10$CqoHC3OnGIDeUPwh7BdzMOGG3CuvUp1U2FmNmjNP1zu.ecUz4XgiS', 'korisnik'),
+(25, 'Krešo1', 'kreso@gmail.com', '$2y$10$og8KlHkzEYsCEED3gXtX4e1OSyhZxfvvqI5y4opRx0wddzMTbsjku', 'admin'),
+(26, 'Pero321', 'pero123@gmail.com', '$2y$10$iYd4XUpUX4A7roNuWh82xucfQ.SIkwlDd9ZKhVwVYpBb291L8yUB.', 'korisnik');
 
 -- --------------------------------------------------------
 
@@ -56,15 +59,21 @@ INSERT INTO `korisnik` (`id`, `nadimak`, `email`, `lozinka`, `uloga`) VALUES
 CREATE TABLE `ljestvica` (
   `korisnik` tinyint(4) NOT NULL,
   `postici` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `ljestvica`
 --
 
 INSERT INTO `ljestvica` (`korisnik`, `postici`) VALUES
-(4, 6),
-(10, 3);
+(4, 13.5),
+(20, 6),
+(21, 1.5),
+(23, 9),
+(25, 3),
+(24, 9),
+(22, 6),
+(19, 3);
 
 -- --------------------------------------------------------
 
@@ -95,7 +104,7 @@ CREATE TABLE `pokemon` (
   `efektivnost` varchar(200) DEFAULT NULL,
   `slabost` varchar(2000) DEFAULT NULL,
   `opis` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `pokemon`
@@ -266,15 +275,37 @@ CREATE TABLE `tim` (
   `naziv` varchar(20) NOT NULL DEFAULT `korisnik`,
   `korisnik` tinyint(4) NOT NULL,
   `pokemon` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tim`
 --
 
 INSERT INTO `tim` (`naziv`, `korisnik`, `pokemon`) VALUES
-('10', 10, 1),
-('10', 10, 2);
+('4', 4, 3),
+('4', 4, 130),
+('4', 4, 150),
+('19', 19, 1),
+('19', 19, 4),
+('19', 19, 7),
+('20', 20, 1),
+('20', 20, 2),
+('20', 20, 3),
+('21', 21, 7),
+('21', 21, 8),
+('21', 21, 9),
+('22', 22, 4),
+('22', 22, 9),
+('22', 22, 20),
+('23', 23, 7),
+('23', 23, 56),
+('23', 23, 98),
+('24', 24, 103),
+('24', 24, 107),
+('24', 24, 128),
+('25', 25, 8),
+('25', 25, 19),
+('25', 25, 21);
 
 --
 -- Indexes for dumped tables
@@ -285,12 +316,6 @@ INSERT INTO `tim` (`naziv`, `korisnik`, `pokemon`) VALUES
 --
 ALTER TABLE `korisnik`
   ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `ljestvica`
---
-ALTER TABLE `ljestvica`
-  ADD KEY `fk_korisnik_ljestvica` (`korisnik`);
 
 --
 -- Indexes for table `pokemon`
@@ -313,7 +338,7 @@ ALTER TABLE `tim`
 -- AUTO_INCREMENT for table `korisnik`
 --
 ALTER TABLE `korisnik`
-  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `pokemon`
@@ -324,12 +349,6 @@ ALTER TABLE `pokemon`
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `ljestvica`
---
-ALTER TABLE `ljestvica`
-  ADD CONSTRAINT `fk_korisnik_ljestvica` FOREIGN KEY (`korisnik`) REFERENCES `korisnik` (`id`);
 
 --
 -- Constraints for table `tim`

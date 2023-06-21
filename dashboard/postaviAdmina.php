@@ -1,6 +1,6 @@
 <?php
 
-include './konekcija.php';
+include '../snippets/konekcija.php';
 
 session_start();
 $userId = $_GET['id'];
