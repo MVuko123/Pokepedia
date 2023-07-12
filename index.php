@@ -76,10 +76,12 @@ include './snippets/provjeraTima.php';
                 </div>
                 <div class="col-md-3">
                     <h3 class="text-white text-center">
-                        Službeni Pokémon Twitter Račun
+                        Službeni Pokémon Instagram Račun
                     </h3>
-                    <a class="twitter-timeline" data-height="600vh" data-theme="dark" href="https://twitter.com/Pokemon?ref_src=twsrc%5Etfw">Tweets by Pokemon</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                   <!-- <a class="twitter-timeline" data-height="600vh" data-theme="dark" href="https://twitter.com/Pokemon?ref_src=twsrc%5Etfw">Tweets by Pokemon</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                    <div class="elfsight-app-937cdf36-bcfc-4648-969b-2f0dade49091" ></div>
                 </div>
             </div>
         </div>

@@ -116,7 +116,7 @@ $korisnikQuery = mysqli_query($conn, $korisnikSql) or die(mysqli_error($error));
                                 </div>
                              </div>
                             <?php } ?>
-                    </div>
+                        </div>
                     <div class="p-3 d-none cardKorisnik" id="korisnikCardZadnja-<?php echo $korisnikRow['id']; ?>">
                         <div class="col-md-12">
                             <?php
@@ -178,7 +178,7 @@ $korisnikQuery = mysqli_query($conn, $korisnikSql) or die(mysqli_error($error));
         </div>
     </main>
     <footer class="container-fluid bg-dark text-center text-white text-lg-start">
-        <?php include '../snippets/footer.html'; ?>
+        <?php include 'footerDashboard.html'; ?>
     </footer>
 </body>
 

@@ -46,7 +46,7 @@ if (session_status() === PHP_SESSION_NONE) {
                             <a href="../ljestvica.php" class="dropdown-item">Ljestvica</a>
                             <?php if ($_SESSION['role'] == 'admin' || $_SESSION['role'] == 'owner') { ?>
                                 <div class="dropdown-divider"></div>
-                                <a href="../dashboard.php" class="dropdown-item" target="_blank">Dashboard</a>
+                                <a href="../dashboard.php" class="dropdown-item" target="_blank">Upravljačka ploča</a>
                                 <div class="dropdown-divider"></div>
                             <?php } ?>
                             <a href="../odjava.php" class="dropdown-item">Odjava</a>

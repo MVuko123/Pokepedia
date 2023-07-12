@@ -21,6 +21,16 @@ if (isset($_SESSION['id'])) {
             echo "Error: " . $delTimQuery . ":-" . mysqli_error($conn);
         }
     }
+    $provjeraLjestvica = "SELECT * FROM ljestvica WHERE korisnik='$_SESSION[id]'";
+    $result2 = mysqli_query($conn, $provjeraLjestvica);
+    if(mysqli_num_rows($result)>0){
+        $delLjestQuery = "DELETE FROM ljestvica WHERE korisnik=$userId AND postici BETWEEN 1 and 150";
+        if(mysqli_query($conn, $delLjestQuery)){
+            header("location:./dashboard.php");
+        } else {
+            echo "Error: " . $delLjestQuery . ":-" . mysqli_error($conn);
+        }
+    }
     $korisnikDel = "DELETE FROM korisnik WHERE id='$userId'";
     if (mysqli_query($conn, $korisnikDel)) {
         header('Location: ./dashboard.php');
